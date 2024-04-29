@@ -2,6 +2,9 @@
   "name": "news-clips",
   "version": "0.1.0",
   "private": true,
+   "engines": {
+      "node": "18.x"
+    },
   "scripts": {
     "flask-dev": "pip install -r requirements.txt && python -c \"import nltk; nltk.download('punkt')\" && python -m flask --app api/index run -p 5328",
     "next-dev": "next dev",
