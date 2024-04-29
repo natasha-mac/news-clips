@@ -1,33 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## The What
+
+NewsClips is an app that summarizes news articles. 
+
+## The Why
+
+With the new age technology, and ubiquitous assimilation of information, the attention span of people has been regressing. Moreover, there are sources, where the same point is made over and over to strategically keep the users on their website for a long time. This app summarizes the news articles into 3-4 sentences, saving time for the user to decide whether they want to read more about it in detail or skip it. 
+
+In the words of William Shakespeare - "Brevity is the soul of Wit".
+
+##  The How
+
+This is a hybrid Next.js + Python app that uses Next.js as the frontend and Flask as the API backend. One great use case of this is that to write Next.js apps that use Python AI libraries on the backend. We integrated an open source python AI library called "Sumy", to summarize the news content. 
+
+The Python/Flask server is mapped into to Next.js app under /api/.
+
+This is implemented using next.config.js rewrites to map any request to /api/:path* to the Flask API, which is hosted in the /api folder.
+
+On localhost, the rewrite will be made to the 127.0.0.1:5328 port, which is where the Flask server is running.
 
 ## Getting Started
 
-First, run the development server:
+Assuming you have Nodejs, npm and Python installed in your system:
+First, run the following commands in the specified order :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install - #to install all the dependencies for UI
+npm run setup - # to install all the dependencies for the server
+npm run dev - #to concurrently run the server and the UI
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The Flask server will be running on http://127.0.0.1:5328 – feel free to change the port in package.json (you'll also need to update it in next.config.js).
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Next.js and Flask and Python AI tool integration, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Nextjs Flask](https://vercel.com/templates/next.js/nextjs-flask-starter) - learn about nextjs, flask template
+- [Sumy AI](https://github.com/miso-belica/sumy/blob/main/README.md) - Python AI Summarization tool
 
 ## Deploy on Vercel
 

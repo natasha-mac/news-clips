@@ -2,8 +2,11 @@
   "name": "news-clips",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
-    "flask-dev": "python -m flask --app api/index run -p 5328",
+    "flask-dev": "pip install -r requirements.txt && python -c \"import nltk; nltk.download('punkt')\" && python -m flask --app api/index run -p 5328",
     "next-dev": "next dev",
     "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
     "build": "next build",
@@ -22,6 +25,6 @@
     "postcss": "^8.4.38",
     "react": "^18",
     "react-dom": "^18",
-    "request-promise": "^4.2.6"
+    "pnpm": "^9.0.6"
   }
 }
