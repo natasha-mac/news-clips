@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "setup": "python -c \"import nltk; nltk.download('punkt')\"",
     "flask-dev": "python -m flask --app api/index run -p 5328",
     "next-dev": "next dev",
     "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
@@ -21,6 +22,7 @@
     "react-dom": "^18",
     "request-promise": "^4.2.6",
     "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38"
+    "postcss": "^8.4.38",
+    "pnpm": "^9.0.6"
   }
 }
