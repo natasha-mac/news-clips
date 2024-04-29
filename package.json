@@ -3,14 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "flask-dev": "python -m flask --app api/index run -p 5328",
+    "next-dev": "next dev",
+    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.15",
+    "axios": "^1.6.8",
+    "concurrently": "^8.2.2",
+    "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.1"
+    "request-promise": "^4.2.6",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38"
   }
 }
