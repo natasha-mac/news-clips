@@ -16,6 +16,8 @@
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "request-promise": "^4.2.6"
+    "request-promise": "^4.2.6",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38"
   }
 }
