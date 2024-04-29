@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "setup": "python -c \"import nltk; nltk.download('punkt')\"",
+    "setup": "pip install -r requirements.txt && python -c \"import nltk; nltk.download('punkt')\"",
     "flask-dev": "python -m flask --app api/index run -p 5328",
     "next-dev": "next dev",
     "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
