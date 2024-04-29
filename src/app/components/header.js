@@ -1,8 +1,8 @@
 import { AppBar, styled } from "@mui/material";
 import Image from "next/image";
 
-const StyledApp = styled(AppBar)`
-  background: #fff;
+const Title = styled(AppBar)`
+  background: #212121;
   height: 70px;
 `;
 
@@ -12,11 +12,11 @@ const Logo = styled("div")({
 
 const Header = () => {
   return (
-    <StyledApp>
+    <Title>
       <Logo>
         <Image src="/Logo.png" width={70} height={70} alt="Logo" />
       </Logo>
-    </StyledApp>
+    </Title>
   );
 };
 
