@@ -2,9 +2,8 @@
 
 import { Box, styled } from "@mui/material";
 import { Card, CardContent, Typography, Grid } from "@mui/material";
-import jsonData from "./data.json";
 import { useState, useEffect } from "react";
-import Header from "./components/header";
+import Header from "../components/header";
 
 const ContainerBox = styled(Box)(({ theme }) => ({
   width: "59%",
@@ -91,7 +90,7 @@ export async function getSummary() {
   return data;
 }
 
-export default async function Home() {
+export default function Home() {
   const [articleData, setArticleData] = useState(null);
   const [isLoading, setLoading] = useState(true);
 
