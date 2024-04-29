@@ -1,6 +1,8 @@
+import "../globals.css";
+
 export const metadata = {
-  title: "NewsClips",
-  description: "News website",
+  title: "News-Clips",
+  description: "Summary of News Articles",
 };
 
 export default function RootLayout({ children }) {
